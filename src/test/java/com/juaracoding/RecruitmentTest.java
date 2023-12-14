@@ -42,8 +42,8 @@ public class RecruitmentTest {
     public void testAddCandidate() {
         RecruitmentPage recruitmentPage = new RecruitmentPage();
         recruitmentPage.addCandidate("Astrin", "Indah", "Melliana", "QA Tester", "astrin@gmail.com",
-                "0812312112", "abc.doc", "Perkenalkan nama saya Astrin", "2023-12-14","Testing");
-        //Assert.assertEquals(recruitmentPage.getMenuRecruitment(), "Recruitment");
+                "0812312112", "abc.doc", "Testingg", "2023-12-14","Testing");
+        Assert.assertEquals(recruitmentPage.getMenuRecruitment(), "Recruitment");
 
     }
 
