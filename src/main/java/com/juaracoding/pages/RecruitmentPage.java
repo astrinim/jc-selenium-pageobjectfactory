@@ -10,19 +10,21 @@ public class RecruitmentPage {
 
     private WebDriver driver;
 
+
+
     public RecruitmentPage() {
         this.driver = DriverSingleton.getDriver();
         PageFactory.initElements(driver, this);
 
     }
 
-    @FindBy(xpath = "//a[@class='oxd-main-menu-item active']")
-    private WebElement btnRecruitment;
-    @FindBy(xpath = "//span[@class='[normalize-space()='Recruitment']")
-    private WebElement menuRecruitment;
+//    @FindBy(xpath = "//a[@class='oxd-main-menu-item active']")
+//    private WebElement btnRecruitment;
+    @FindBy(xpath = "//span[normalize-space()='Recruitment']")
+    public WebElement menuRecruitment;
 
     @FindBy(xpath = "//button[normalize-space()='Add']")
-    private WebElement btnAddCandidate;
+    public WebElement btnAddCandidate;
 
     @FindBy(xpath = "//input[@placeholder='First Name']")
     private WebElement firstName;
@@ -60,16 +62,18 @@ public class RecruitmentPage {
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement btnSave;
 
-    public void recruitment(){
-        btnRecruitment.click();
-    }
+
+//    public void btnRecruitment() {
+//        btnRecruitment.click();
+//    }
+
 
     public String getMenuRecruitment(){
         return menuRecruitment.getText();
 
     }
 
-    public void add(){
+    public void btnAdd(){
         btnAddCandidate.click();
     }
     public void addCandidate(String firstName, String middleName, String lastName, String vacancy, String email, String contactNumber, String resume,
@@ -94,8 +98,9 @@ public class RecruitmentPage {
 
 
 
-    public void save(){
+    public void btnsave(){
         btnSave.click();
     }
+
 
 }

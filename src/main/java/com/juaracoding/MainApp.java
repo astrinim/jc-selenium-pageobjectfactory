@@ -26,11 +26,14 @@ public class MainApp {
         loginPage.login("Admin", "admin123");
         System.out.println(loginPage.getTxtDashboard());
 
+
+
         //Call method from pages
-        RecruitmentPage recruitmentPage = new RecruitmentPage();
-        recruitmentPage.addCandidate("Astrin", "Indah", "Melliana", "QA Tester", "astrin@gmail.com",
-                "0812312112", "abc.doc", "Perkenalkan nama saya Astrin", "2023-12-14","Testing");
-        System.out.println(recruitmentPage.getMenuRecruitment());
+//        RecruitmentPage recruitmentPage = new RecruitmentPage();
+//        recruitmentPage.btnRecruitment();
+//        recruitmentPage.addCandidate("Astrin", "Indah", "Melliana", "QA Tester", "astrin@gmail.com",
+//                "0812312112", "abc.doc", "Perkenalkan nama saya Astrin", "2023-12-14","Testing");
+//        System.out.println(recruitmentPage.getMenuRecruitment());
 
 
         loginPage.logout();

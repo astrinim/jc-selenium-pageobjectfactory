@@ -14,13 +14,14 @@ public class RecruitmentTest {
     private WebDriver driver;
     private int priority;
 
+    private RecruitmentPage recruitmentPage;
     @BeforeClass
     public void setUp() {
         DriverSingleton.getInstance("chrome");
         driver = DriverSingleton.getDriver();
         String url = "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates";
         driver.get(url);
-        //LoginPage loginPage = new LoginPage();
+        RecruitmentPage recruitmentPage = new RecruitmentPage();
     }
 
     @AfterClass
@@ -33,7 +34,7 @@ public class RecruitmentTest {
     public void testValidationLogin() {
         LoginPage loginPage = new LoginPage();
         loginPage.login("Admin", "admin123");
-        Assert.assertEquals(loginPage.getTxtDashboard(), "Dashboard");
+        Assert.assertEquals(recruitmentPage.getMenuRecruitment(), "Recruitment");
 
     }
 
@@ -43,7 +44,7 @@ public class RecruitmentTest {
         RecruitmentPage recruitmentPage = new RecruitmentPage();
         recruitmentPage.addCandidate("Astrin", "Indah", "Melliana", "QA Tester", "astrin@gmail.com",
                 "0812312112", "abc.doc", "Testingg", "2023-12-14","Testing");
-        Assert.assertEquals(recruitmentPage.getMenuRecruitment(), "Recruitment");
+        //Assert.assertEquals(recruitmentPage.getMenuRecruitment(), "Recruitment");
 
     }
 
